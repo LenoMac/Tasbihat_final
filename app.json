@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "tasbihat.2",
+    "slug": "tasbihat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.jpg",
+      "resizeMode": "cover",
+      "backgroundColor": "#320548"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#320548"
+      },
+      "package": "com.hafizbeyyyy.tasbihat"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8efc71b7-c744-4d1c-9e79-ef35184d3e10"
+      }
+    }
+  }
+}
