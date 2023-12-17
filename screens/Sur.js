@@ -1,73 +1,156 @@
-import React from 'react'
-import { View, Text, Image, TouchableNativeFeedback, ScrollView, TouchableOpacity } from 'react-native'
-import Right from '../img/Right.png'
-import { gStyle } from '../Style/Style'
-import { useNavigation } from '@react-navigation/native'
-import Header from './Header'
+import React from "react";
+import {
+  View,
+  Text,
+  Image,
+  TouchableNativeFeedback,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
+import Right from "../img/Right.png";
+import { gStyle } from "../Style/Style";
+import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import Header from "./Header";
 
 const ListOfSur = [
-    { title: 'Сура аль-Фатиха', name: 'al-Fatiha', number: 1 },
-    { title: 'Сура аль-Аср', name: 'al-Asr', number: 2 },
-    { title: 'Сура аль-Хумаза', name: 'al-Humaza', number: 3 },
-    { title: 'Сура аль-Филь', name: 'al-Fil', number: 4 },
-    { title: 'Сура Курайш', name: 'Kuraysh', number: 5 },
-    { title: 'Сура Аль-Маун', name: 'al-Maun', number: 6 },
-    { title: 'Сура аль-Кавсар', name: 'al-Kavsar', number: 7 },
-    { title: 'Сура аль-Кафирун', name: 'al-Kafirun', number: 8 },
-    { title: 'Сура ан-Наср', name: 'an-Nasr', number: 9 },
-    { title: 'Сура аль-Масад', name: 'al-Masad', number: 10 },
-    { title: 'Сура аль-Ихлас', name: 'al-Ihlas', number: 11 },
-    { title: 'Сура аль-Фалак', name: 'al-Falak', number: 12 },
-    { title: 'Сура ан-Нас', name: 'an-Nas', number: 13 }
-]
+  {
+    titleRus: "Сура аль-Фатиха",
+    titleKg: "Фатиха сүрөсү",
+    name: "al-Fatiha",
+    number: 1,
+  },
+  {
+    titleRus: "Сура аль-Аср",
+    titleKg: "Аср сүрөсү",
+    name: "al-Asr",
+    number: 2,
+  },
+  {
+    titleRus: "Сура аль-Хумаза",
+    titleKg: "Хумаза сүрөсү",
+    name: "al-Humaza",
+    number: 3,
+  },
+  {
+    titleRus: "Сура аль-Филь",
+    titleKg: "Филь сүрөсү",
+    name: "al-Fil",
+    number: 4,
+  },
+  {
+    titleRus: "Сура Курайш",
+    titleKg: "Курайш сүрөсү",
+    name: "Kuraysh",
+    number: 5,
+  },
+  {
+    titleRus: "Сура Аль-Маун",
+    titleKg: "Маун сүрөсү",
+    name: "al-Maun",
+    number: 6,
+  },
+  {
+    titleRus: "Сура аль-Каусар",
+    titleKg: "Каусар сүрөсү",
+    name: "al-Kavsar",
+    number: 7,
+  },
+  {
+    titleRus: "Сура аль-Кафирун",
+    titleKg: "Кафирун сүрөсү",
+    name: "al-Kafirun",
+    number: 8,
+  },
+  {
+    titleRus: "Сура ан-Наср",
+    titleKg: "Наср сүрөсү",
+    name: "an-Nasr",
+    number: 9,
+  },
+  {
+    titleRus: "Сура аль-Масад",
+    titleKg: "Масад сүрөсү",
+    name: "al-Masad",
+    number: 10,
+  },
+  {
+    titleRus: "Сура аль-Ихлас",
+    titleKg: "Ихлас сүрөсү",
+    name: "al-Ihlas",
+    number: 11,
+  },
+  {
+    titleRus: "Сура аль-Фалак",
+    titleKg: "Фалак сүрөсү",
+    name: "al-Falak",
+    number: 12,
+  },
+  {
+    titleRus: "Сура ан-Нас",
+    titleKg: "Нас сүрөсү",
+    name: "an-Nas",
+    number: 13,
+  },
+];
 
 const CustomButton = ({ title, name, number, onPress }) => {
-    return (
-        <TouchableOpacity onPress={() => onPress(name)}>
-            <View style={gStyle.sur_btn}>
-                <View style={gStyle.sur_btn_row}>
-                    <Text style={gStyle.text1}>{number + '.'}</Text>
-                    <Text style={gStyle.text2}>{title}</Text>
-                </View>
-                <Image source={Right} />
-            </View >
-        </TouchableOpacity>
-    )
-}
-
+  return (
+    <TouchableOpacity onPress={() => onPress(name)}>
+      <View style={gStyle.sur_btn}>
+        <View style={gStyle.sur_btn_row}>
+          <Text style={gStyle.text1}>{number + "."}</Text>
+          <Text style={gStyle.text2}>{title}</Text>
+        </View>
+        <Image source={Right} />
+      </View>
+    </TouchableOpacity>
+  );
+};
 
 export const Sur = () => {
+  const [lang, setLang] = React.useState(null);
 
-    const navigation = useNavigation()
-    const onPress = (name) => {
-        navigation.navigate(name)
+  React.useEffect(() => {
+    loadLang();
+  }, []);
+
+  const loadLang = async () => {
+    try {
+      const savedLang = await AsyncStorage.getItem("currentLanguage");
+      setLang(savedLang);
+    } catch (e) {
+      console.log("Error loading languages: ", e);
     }
+  };
 
-    return (
-        <>
-            <View style={gStyle.header}>
-                <Header title='СУРЫ' />
-            </View>
-            <ScrollView style={gStyle.sur_cont}>
-                {/* <View style={gStyle.container}> */}
-                <View style={gStyle.sur_cont_row}>
+  const navigation = useNavigation();
+  const onPress = (name) => {
+    navigation.navigate(name);
+  };
 
-                    {
-                        ListOfSur.map((item, index) => {
-                            return (
-                                <CustomButton
-                                    title={item.title}
-                                    number={item.number}
-                                    name={item.name}
-                                    key={index}
-                                    onPress={onPress}
-                                />
-                            )
-                        })
-                    }
-                </View>
-                {/* </View> */}
-            </ScrollView >
-        </>
-    )
-}
+  return (
+    <>
+      <View style={gStyle.header}>
+        <Header title={lang === 'kg' ? 'СҮРӨЛӨР' : 'СУРЫ'} />
+      </View>
+      <ScrollView style={gStyle.sur_cont}>
+        {/* <View style={gStyle.container}> */}
+        <View style={gStyle.sur_cont_row}>
+          {ListOfSur.map((item, index) => {
+            return (
+              <CustomButton
+                title={lang === "rus" ? item.titleRus : item.titleKg}
+                number={item.number}
+                name={item.name}
+                key={index}
+                onPress={onPress}
+              />
+            );
+          })}
+        </View>
+        {/* </View> */}
+      </ScrollView>
+    </>
+  );
+};
