@@ -30,6 +30,8 @@ import AlMasad from "./SurScreens/AlMasad"
 import AlIhlas from "./SurScreens/AlIhlas"
 import AlFalak from "./SurScreens/AlFalak"
 import AnNas from "./SurScreens/AnNas"
+// Импорт О нас
+import About from "./screens/About";
 
 const Stack = createNativeStackNavigator();
 function Navigate() {
@@ -211,6 +213,13 @@ function Navigate() {
           component={AlMaun}
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="about"
+          component={About}
+          options={{
+            headerShown: false
           }}
         />
       </Stack.Navigator>
