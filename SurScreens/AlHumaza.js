@@ -74,7 +74,7 @@ export default function AlHumaza() {
               title="Аль-Хумаза"
               arabicText={arabicText}
               rusText={rusText}
-              meaningText={meaningText}
+              meaningText={lang === 'kg' ? meaningKgText : meaningRusText}
             />
           </View>
         </View>
