@@ -224,7 +224,7 @@ export const Fajr = () => {
             style={{
               color: "#fff",
               fontSize: 16,
-              fontFamily: "Montserrat Medium",
+              // fontFamily: "Montserrat Medium",
               paddingBottom: 120,
               lineHeight: 23,
             }}

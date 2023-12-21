@@ -36,7 +36,7 @@ export const gStyle = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    fontFamily: "Montserrat Medium",
+    // fontFamily: "Montserrat Medium",
   },
   textArabic: {
     textAlign: "center",
@@ -64,7 +64,7 @@ export const gStyle = StyleSheet.create({
   },
   title: {
     color: "#F1DC1A",
-    fontFamily: "Montserrat SemiBold",
+    // fontFamily: "Montserrat SemiBold",
     fontWeight: "bold",
     fontSize: 25,
   },
@@ -89,7 +89,7 @@ export const gStyle = StyleSheet.create({
   },
   langText: {
     color: "#fff",
-    fontFamily: "Montserrat Medium",
+    // fontFamily: "Montserrat Medium",
     fontWeight: "bold",
     fontSize: 15
   },
@@ -128,7 +128,7 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     fontWeight: "600",
-    fontFamily: "Montserrat SemiBold",
+    // fontFamily: "Montserrat SemiBold",
   },
   section: {
     marginTop: 20,
@@ -184,7 +184,7 @@ export const gStyle = StyleSheet.create({
   text2: {
     color: "#fff",
     fontSize: 19,
-    fontFamily: 'Montserrat Medium'
+    // fontFamily: 'Montserrat Medium'
   },
 
   // Tafrijia
@@ -226,12 +226,14 @@ export const gStyle = StyleSheet.create({
   // HEADER
   header: {
     backgroundColor: "#320548",
+    // backgroundColor: 'red',
     width: "100%",
     padding: 20,
-    // paddingTop: Platform.OS === 'ios' ? 40 : (Platform.OS === 'android' ? 60 : 0),
+    paddingTop: Platform.OS === 'ios' ? 40 : (Platform.OS === 'android' && 10),
     position: "absolute",
     zIndex: 10,
-    top: Platform.OS === "android" ? -10 : 0,
+    // top: Platform.OS === "android" ? -10 : 20,
+    top: 0,
     left: 0,
     right: 0,
     borderBottomColor: "#2A043D",
@@ -248,7 +250,7 @@ export const gStyle = StyleSheet.create({
   headerText: {
     color: "#fff",
     fontSize: Dimensions.get("window").width <= 375 ? 18 : 20,
-    fontFamily: "Montserrat SemiBold",
+    // fontFamily: "Montserrat SemiBold",
   },
   // FAJR
   soundArea: {
@@ -305,11 +307,11 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     lineHeight: 38,
-    fontFamily: "Montserrat Medium",
+    // fontFamily: "Montserrat Medium",
   },
   about: {
     alignSelf: 'center',
     color: '#F1DC1A',
-    fontFamily: 'Montserrat Medium',
+    // fontFamily: 'Montserrat Medium',
   }
 });
