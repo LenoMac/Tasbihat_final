@@ -313,3 +313,8 @@ export const gStyle = StyleSheet.create({
     fontFamily: 'Montserrat Medium',
   }
 });
+
+
+// 
+// 
+// /
