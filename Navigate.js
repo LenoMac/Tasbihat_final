@@ -12,7 +12,7 @@ import Tafrijia from "./screens/Tafrijia";
 import { HomeBack } from "./screens/HomeBack";
 import { Fajr } from "./screens/Fajr";
 import { Zuhr } from "./screens/Zuhr";
-import { Acr } from "./screens/Acr";
+import { Asr } from "./screens/Asr";
 import { Isha } from "./screens/Isha";
 import { Magrib } from "./screens/Magrib";
 import React from "react";
@@ -104,7 +104,7 @@ function Navigate() {
         />
         <Stack.Screen
           name="Acr"
-          component={Acr}
+          component={Asr}
           options={{
             headerShown: false,
           }}
