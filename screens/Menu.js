@@ -79,9 +79,7 @@ export const Menu = () => {
     navigation.navigate(name);
   };
   return (
-    <SafeAreaView backgroundColor="#320548">
-      <ScrollView style={{ width: "100%", height: "100%" }}>
-        {/* <View style={gStyle.menu_container}> */}
+      <ScrollView style={{ width: "100%", height: "100%", backgroundColor: '#320548'}}>
         <View style={gStyle.menu}>
           <View style={gStyle.logoAndText}>
             <Image style={{ width: 120, height: 120 }} source={Logo} />
@@ -141,6 +139,5 @@ export const Menu = () => {
         </View>
         {/* </View> */}
       </ScrollView>
-    </SafeAreaView>
   );
 };
