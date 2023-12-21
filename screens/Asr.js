@@ -176,7 +176,7 @@ const fajrText = `Аср намаздын парзы окулуп, салам б
   return (
     <View>
       <View style={gStyle.header}>
-        <Header title="АСР" />
+        <Header title="АСР1" />
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
