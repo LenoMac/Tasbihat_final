@@ -21,8 +21,7 @@ export const gStyle = StyleSheet.create({
   container: {
     width: "100%",
     alignSelf: "center",
-    marginTop: windowWidth <= 480 ? 80 : windowWidth >= 480 && 190,
-    // 110
+    marginTop: windowWidth <= 375 ? 100 : (windowWidth > 392 && 70),
   },
   container_row: {
     marginTop: 20,
@@ -57,6 +56,7 @@ export const gStyle = StyleSheet.create({
     flexDirection: "column",
     gap: 10,
     alignItems: "center",
+    paddingBottom: 50
   },
   logoAndText: {
     alignItems: "center",
@@ -229,11 +229,9 @@ export const gStyle = StyleSheet.create({
     // backgroundColor: 'red',
     width: "100%",
     padding: 20,
-    paddingTop: Platform.OS === 'ios' ? 40 : (Platform.OS === 'android' && 10),
+    paddingTop: Platform.OS === 'ios' ? 45 : (Platform.OS === 'android' && 10),
     position: "absolute",
     zIndex: 10,
-    // top: Platform.OS === "android" ? -10 : 20,
-    top: 0,
     left: 0,
     right: 0,
     borderBottomColor: "#2A043D",
