@@ -15,6 +15,8 @@ export default function App() {
     "Montserrat Medium": require("./assets/fonts/Montserrat Medium.ttf"),
     "Montserrat Semibold": require("./assets/fonts/Montserrat SemiBold.ttf"),
   });
+
+  if(!fontsLoaded) return <Button title="It is not working on it!"/>
   return (
     <View style={gStyle.app}>
       <StatusBar backgroundColor="#320548" barStyle="light-content" />
