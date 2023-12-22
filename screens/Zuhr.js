@@ -9,7 +9,7 @@ const audioTrack = require("../audio/Beshim.m4a");
 const data = require("../Highlighted/highlighted.json");
 
 export const Zuhr = () => {
-  const fajrText = `Бешим намаздын парзы окулуп, салам берилгенден кийин:
+  const fajrText = `Зухр намаздын парзы окулуп, салам берилгенден кийин:
   
 "Аллоохумма антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат. 
   
@@ -131,15 +131,7 @@ export const Zuhr = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 16,
-              fontFamily: "Montserrat Medium",
-              paddingBottom: 120,
-              lineHeight: 23,
-            }}
-          >
+          <Text style={gStyle.tasbihatText}>
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
@@ -148,9 +140,7 @@ export const Zuhr = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>
-        <SoundArea audioTrack={audioTrack} />
-      </View>
+      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
     </View>
   );
 };
