@@ -21,16 +21,32 @@ export default function SurSample({ title, arabicText, rusText, meaningText }) {
 
   return (
     <View style={gStyle.surSample}>
-      <Text style={gStyle.surTitle}>{title}</Text>
+      <Text style={[gStyle.surTitle, { fontFamily: "Montserrat Semibold" }]}>
+        {title}
+      </Text>
       <Text style={gStyle.surArabic}>{arabicText}</Text>
-      <Text style={[gStyle.text, { color: "#F2BB4A", fontSize: 20 }]}>
-        {lang === 'kg' ? 'Окулушу' : 'Читается'}
+      <Text
+        style={[
+          gStyle.text,
+          { color: "#F2BB4A", fontSize: 20, fontFamily: "Montserrat Semibold" },
+        ]}
+      >
+        {lang === "kg" ? "Транскрипция:" : "Транскрипция:"}
       </Text>
-      <Text style={gStyle.surRus}>{rusText}</Text>
-      <Text style={[gStyle.text, { color: "#F2BB4A", fontSize: 20 }]}>
-        {lang === 'kg' ? 'Мааниси' : 'Значение'}
+      <Text style={[gStyle.surRus, { fontFamily: "Montserrat Semibold" }]}>
+        {rusText}
       </Text>
-      <Text style={gStyle.surRus}>{meaningText}</Text>
+      <Text
+        style={[
+          gStyle.text,
+          { color: "#F2BB4A", fontSize: 20, fontFamily: "Montserrat Semibold" },
+        ]}
+      >
+        {lang === "kg" ? "Мааниси" : "Значение"}
+      </Text>
+      <Text style={[gStyle.surRus, { fontFamily: "Montserrat Semibold" }]}>
+        {meaningText}
+      </Text>
     </View>
   );
 }

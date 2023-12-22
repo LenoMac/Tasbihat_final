@@ -227,7 +227,9 @@ export const Fajr = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text style={gStyle.tasbihatText}>
+          <Text
+            style={[gStyle.tasbihatText, { fontFamily: "Montserrat Semibold" }]}
+          >
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
@@ -236,7 +238,9 @@ export const Fajr = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
+      <View>
+        <SoundArea audioTrack={audioTrack} />
+      </View>
     </View>
   );
 };
