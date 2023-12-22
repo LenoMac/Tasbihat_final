@@ -1,5 +1,4 @@
 import { Dimensions, Platform, StyleSheet } from "react-native";
-
 const platform = Platform.OS;
 const windowWidth = Dimensions.get("window").width;
 
@@ -49,7 +48,6 @@ export const gStyle = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    // fontFamily: "Montserrat Medium",
   },
   tasbihatText: {
     fontSize: windowWidth / 24,
@@ -85,9 +83,8 @@ export const gStyle = StyleSheet.create({
   },
   title: {
     color: "#F1DC1A",
-    // fontFamily: "Montserrat SemiBold",
-    fontWeight: "bold",
-    fontSize: 25,
+    fontWeight: "900",
+    fontSize: 22,
   },
   language: {
     display: "flex",
@@ -273,8 +270,8 @@ export const gStyle = StyleSheet.create({
       ios: {
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
       },
       android: {
         elevation: 10,
@@ -358,7 +355,6 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     lineHeight: 38,
-    // fontFamily: "Montserrat Medium",
   },
   about: {
     alignSelf: "center",
@@ -366,7 +362,7 @@ export const gStyle = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
-    // fontFamily: 'Montserrat Medium',
+    marginTop: 20,
   },
 });
 
