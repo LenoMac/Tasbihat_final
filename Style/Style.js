@@ -1,5 +1,6 @@
 import { Dimensions, Platform, StyleSheet } from "react-native";
 
+const platform = Platform.OS;
 const windowWidth = Dimensions.get("window").width;
 
 export const gStyle = StyleSheet.create({
@@ -21,8 +22,21 @@ export const gStyle = StyleSheet.create({
   container: {
     width: "100%",
     alignSelf: "center",
-    marginTop: windowWidth <= 375 ? 100 : (windowWidth > 392 && 70),
+    ...Platform.select({
+      ios: {
+        marginTop:
+          windowWidth >= 375 && windowWidth < 392
+            ? 120
+            : windowWidth >= 392 && windowWidth < 430
+            ? 120
+            : windowWidth >= 430 && 130,
+      },
+      android: {
+        marginTop: 70,
+      },
+    }),
   },
+
   container_row: {
     marginTop: 20,
     display: "flex",
@@ -37,6 +51,12 @@ export const gStyle = StyleSheet.create({
     color: "#fff",
     // fontFamily: "Montserrat Medium",
   },
+  tasbihatText: {
+    fontSize: windowWidth / 24,
+    color: "#fff",
+    paddingBottom: 120,
+    lineHeight: 23,
+  },
   textArabic: {
     textAlign: "center",
     fontSize: 28,
@@ -50,13 +70,14 @@ export const gStyle = StyleSheet.create({
   },
   menu: {
     width: "100%",
-    height: "100%",
+    height: windowWidth >= 428 ? "114%" : "100%",
     backgroundColor: "#320548",
     display: "flex",
     flexDirection: "column",
     gap: 10,
+    justifyContent: "space-between",
     alignItems: "center",
-    paddingBottom: 50
+    paddingBottom: 50,
   },
   logoAndText: {
     alignItems: "center",
@@ -91,7 +112,7 @@ export const gStyle = StyleSheet.create({
     color: "#fff",
     // fontFamily: "Montserrat Medium",
     fontWeight: "bold",
-    fontSize: 15
+    fontSize: 15,
   },
   buttonContainer: {
     alignItems: "center",
@@ -157,11 +178,23 @@ export const gStyle = StyleSheet.create({
     width: "100%",
     backgroundColor: "#320548",
     paddingHorizontal: 25,
-    marginTop: 70,
+    marginTop: 60,
   },
   sur_cont_row: {
     display: "flex",
     flexDirection: "column",
+    ...Platform.select({
+      ios: {
+        marginTop:
+          windowWidth <= 430 && windowWidth >= 392
+            ? 70
+            : windowWidth <= 391 && windowWidth >= 350
+            ? 40
+            : windowWidth <= 349 && windowWidth >= 300
+            ? 20
+            : 30,
+      },
+    }),
   },
   sur_btn: {
     display: "flex",
@@ -226,16 +259,27 @@ export const gStyle = StyleSheet.create({
   // HEADER
   header: {
     backgroundColor: "#320548",
-    // backgroundColor: 'red',
     width: "100%",
     padding: 20,
-    paddingTop: Platform.OS === 'ios' ? 45 : (Platform.OS === 'android' && 10),
+    paddingBottom: 15,
+    paddingTop: Platform.OS === "ios" ? 45 : Platform.OS === "android" && 10,
     position: "absolute",
     zIndex: 10,
     left: 0,
     right: 0,
     borderBottomColor: "#2A043D",
     borderBottomWidth: 1,
+    ...Platform.select({
+      ios: {
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.3,
+        shadowRadius: 3,
+      },
+      android: {
+        elevation: 10,
+      },
+    }),
   },
 
   header_row_flex: {
@@ -244,6 +288,14 @@ export const gStyle = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     width: "100%",
+    ...Platform.select({
+      ios: {
+        height: windowWidth <= 430 && windowWidth >= 390 ? 60 : 50,
+      },
+      android: {
+        height: "auto",
+      },
+    }),
   },
   headerText: {
     color: "#fff",
@@ -300,6 +352,7 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 23,
     lineHeight: 55,
+    textAlign: "right",
   },
   surRus: {
     color: "white",
@@ -308,13 +361,15 @@ export const gStyle = StyleSheet.create({
     // fontFamily: "Montserrat Medium",
   },
   about: {
-    alignSelf: 'center',
-    color: '#F1DC1A',
+    alignSelf: "center",
+    color: "#F1DC1A",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
     // fontFamily: 'Montserrat Medium',
-  }
+  },
 });
 
-
-// 
-// 
+//
+//
 // /

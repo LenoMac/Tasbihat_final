@@ -1,5 +1,12 @@
 import React from "react";
-import { Text, View, Image, ScrollView, Pressable } from "react-native";
+import {
+  Text,
+  View,
+  Image,
+  ScrollView,
+  Pressable,
+  Dimensions,
+} from "react-native";
 import { gStyle } from "../Style/Style";
 import Header from "./Header";
 import SoundArea from "./SoundArea";
@@ -8,7 +15,6 @@ import HighlightText from "@sanar/react-native-highlight-text";
 const audioTrack = require("../audio/Sabah.m4a");
 const data = require("../Highlighted/highlighted.json");
 const fajrText = `Фаджр намаздын парзы окулуп, салам берилгенден кийин:
-
 
 "Аллоохумма антас-салааму ваминкас - салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат.
 
@@ -221,15 +227,7 @@ export const Fajr = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 16,
-              // fontFamily: "Montserrat Medium",
-              paddingBottom: 120,
-              lineHeight: 23,
-            }}
-          >
+          <Text style={gStyle.tasbihatText}>
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
@@ -238,9 +236,7 @@ export const Fajr = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>
-        <SoundArea audioTrack={audioTrack} />
-      </View>
+      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
     </View>
   );
 };

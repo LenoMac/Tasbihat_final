@@ -6,6 +6,7 @@ import {
   TouchableNativeFeedback,
   ScrollView,
   TouchableOpacity,
+  Dimensions,
 } from "react-native";
 import Right from "../img/Right.png";
 import { gStyle } from "../Style/Style";
@@ -110,7 +111,6 @@ const CustomButton = ({ title, name, number, onPress }) => {
 
 export const Sur = () => {
   const [lang, setLang] = React.useState(null);
-
   React.useEffect(() => {
     loadLang();
   }, []);
@@ -132,7 +132,7 @@ export const Sur = () => {
   return (
     <>
       <View style={gStyle.header}>
-        <Header title={lang === 'kg' ? 'СҮРӨЛӨР' : 'СУРЫ'} />
+        <Header title={lang === "kg" ? "СҮРӨЛӨР" : "СУРЫ"} />
       </View>
       <ScrollView style={gStyle.sur_cont}>
         {/* <View style={gStyle.container}> */}

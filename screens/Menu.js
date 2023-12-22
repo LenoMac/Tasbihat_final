@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Text,
-  Image,
-  View,
-  Button,
-  StatusBar,
-  ScrollView,
-  SafeAreaView,
-  Platform,
-  Pressable,
-} from "react-native";
+import { Text, Image, View, ScrollView, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 // Импорт Лого и изображении
@@ -79,65 +69,69 @@ export const Menu = () => {
     navigation.navigate(name);
   };
   return (
-      <ScrollView style={{ width: "100%", height: "100%", backgroundColor: '#320548'}}>
-        <View style={gStyle.menu}>
-          <View style={gStyle.logoAndText}>
-            <Image style={{ width: 120, height: 120 }} source={Logo} />
-            <Text style={gStyle.title}>НАМАЗ ТАСБИХАТ</Text>
-            {/* Lang container */}
-            <View style={gStyle.language}>
-              <Pressable onPress={changeToKg}>
-                <View
-                  style={[
-                    gStyle.lanContainer,
-                    lang === "kg"
-                      ? { borderColor: "yellow" }
-                      : { borderColor: "#320548" },
-                  ]}
-                >
-                  <Image
-                    style={{ width: 20, objectFit: "scale-down" }}
-                    source={KG}
-                  />
-                  <Text style={gStyle.langText}>Кыргызча</Text>
-                </View>
-              </Pressable>
-              <Pressable onPress={changeToRus}>
-                <View
-                  style={[
-                    gStyle.lanContainer,
-                    lang === "rus"
-                      ? { borderColor: "yellow" }
-                      : { borderColor: "#320548" },
-                  ]}
-                >
-                  <Image
-                    style={{ width: 20, objectFit: "scale-down" }}
-                    source={RUS}
-                  />
-                  <Text style={gStyle.langText}>Русский</Text>
-                </View>
-              </Pressable>
-            </View>
-          </View>
-          <View style={gStyle.section}>
-            {menuItems.map((item, index) => {
-              return (
-                <CustomButton
-                  onPress={() => onPress(item.name)}
-                  title={lang === "kg" ? item.titleKg : item.titleRus}
-                  key={index}
-                  img={item.img}
-                  name={item.name}
+    <ScrollView
+      style={{ width: "100%", height: "100%", backgroundColor: "#320548" }}
+    >
+      <View style={gStyle.menu}>
+        <View style={gStyle.logoAndText}>
+          <Image style={{ width: 120, height: 120 }} source={Logo} />
+          <Text style={gStyle.title}>НАМАЗ ТАСБИХАТЫ</Text>
+          {/* Lang container */}
+          <View style={gStyle.language}>
+            <Pressable onPress={changeToKg}>
+              <View
+                style={[
+                  gStyle.lanContainer,
+                  lang === "kg"
+                    ? { borderColor: "yellow" }
+                    : { borderColor: "#320548" },
+                ]}
+              >
+                <Image
+                  style={{ width: 20, objectFit: "scale-down" }}
+                  source={KG}
                 />
-              );
-            })}
-            <Pressable onPress={() => navigation.navigate('about')}>
-              <Text style={gStyle.about}>{lang === 'kg' ? 'Тиркеме жөнүндө' : 'О приложений'}</Text>
+                <Text style={gStyle.langText}>Кыргызча</Text>
+              </View>
+            </Pressable>
+            <Pressable onPress={changeToRus}>
+              <View
+                style={[
+                  gStyle.lanContainer,
+                  lang === "rus"
+                    ? { borderColor: "yellow" }
+                    : { borderColor: "#320548" },
+                ]}
+              >
+                <Image
+                  style={{ width: 20, objectFit: "scale-down" }}
+                  source={RUS}
+                />
+                <Text style={gStyle.langText}>Русский</Text>
+              </View>
             </Pressable>
           </View>
         </View>
-        {/* </View> */}
-      </ScrollView>
+        <View style={gStyle.section}>
+          {menuItems.map((item, index) => {
+            return (
+              <CustomButton
+                onPress={() => onPress(item.name)}
+                title={lang === "kg" ? item.titleKg : item.titleRus}
+                key={index}
+                img={item.img}
+                name={item.name}
+              />
+            );
+          })}
+        </View>
+        <Pressable onPress={() => navigation.navigate("about")}>
+          <Text style={gStyle.about}>
+            {lang === "kg" ? "Тиркеме жөнүндө" : "О приложений"}
+          </Text>
+        </Pressable>
+      </View>
+      {/* </View> */}
+    </ScrollView>
   );
 };

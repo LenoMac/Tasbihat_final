@@ -169,15 +169,7 @@ export const Magrib = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 16,
-              fontFamily: "Montserrat Medium",
-              paddingBottom: 120,
-              lineHeight: 23,
-            }}
-          >
+          <Text style={gStyle.tasbihatText}>
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
@@ -186,10 +178,7 @@ export const Magrib = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>
-        <SoundArea audioTrack={audioTrack} />
-      </View>
+      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
     </View>
   );
 };
-

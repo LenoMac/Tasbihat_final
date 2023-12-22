@@ -8,9 +8,8 @@ import HighlightText from "@sanar/react-native-highlight-text";
 const audioTrack = require("../audio/3.Asr-Namazı-Tesbihatı-Аср-Намаз-Тесбихат.m4a");
 const data = require("../Highlighted/highlighted.json");
 
-
 export const Asr = () => {
-const fajrText = `Аср намаздын парзы окулуп, салам берилгенден кийин:
+  const fajrText = `Аср намаздын парзы окулуп, салам берилгенден кийин:
 
 "Аллоохумма антас-салааму ваминкас - салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат.
 
@@ -176,19 +175,11 @@ const fajrText = `Аср намаздын парзы окулуп, салам б
   return (
     <View>
       <View style={gStyle.header}>
-        <Header title="АСР1" />
+        <Header title="АСР" />
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text
-            style={{
-              color: "#fff",
-              fontSize: 16,
-              fontFamily: "Montserrat Medium",
-              paddingBottom: 120,
-              lineHeight: 23,
-            }}
-          >
+          <Text style={gStyle.tasbihatText}>
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
@@ -197,9 +188,7 @@ const fajrText = `Аср намаздын парзы окулуп, салам б
           </Text>
         </View>
       </ScrollView>
-      <View>
-        <SoundArea audioTrack={audioTrack} />
-      </View>
+      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
     </View>
   );
 };
