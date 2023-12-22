@@ -13,12 +13,11 @@ export const Shahada = ({ navigation }) => {
   }, []);
 
   const loadSavedLang = async () => {
-    try{
+    try {
       const savedLang = await AsyncStorage.getItem("currentLanguage");
       setLang(savedLang);
       console.log(savedLang);
-    } 
-    catch(e){
+    } catch (e) {
       console.log(e);
     }
   };
@@ -38,18 +37,36 @@ export const Shahada = ({ navigation }) => {
               أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَ أَشْهَدُ أَنَّ
               مُحَمَّدًا عَبْدُهُ وَ رَسُولُهُ
             </Text>
-            <Text style={[gStyle.textRus, gStyle.text]}>
+            <Text
+              style={[
+                gStyle.textRus,
+                gStyle.text,
+                { fontFamily: "Montserrat Semibold" },
+              ]}
+            >
               Ашхаду алля иляха илляллах. Ва ашхаду анна Мухаммадан ‘абдуху ва
               расулюх.
             </Text>
 
             {lang === "kg" ? (
-              <Text style={[gStyle.textRus, gStyle.text]}>
+              <Text
+                style={[
+                  gStyle.textRus,
+                  gStyle.text,
+                  { fontFamily: "Montserrat Semibold" },
+                ]}
+              >
                 Аллахтан башка сыйынууга татыктуу зат жок жана Мухаммад анын
                 кулу жана элчиси экендигине күбөлүк берем.
               </Text>
             ) : (
-              <Text style={[gStyle.textRus, gStyle.text]}>
+              <Text
+                style={[
+                  gStyle.textRus,
+                  gStyle.text,
+                  { fontFamily: "Montserrat Semibold" },
+                ]}
+              >
                 Я свидетельствую, что нет никого достойного поклонения, кроме
                 Аллаха. И я свидетельствую, что Мухаммад — Его раб и Посланник.
               </Text>
