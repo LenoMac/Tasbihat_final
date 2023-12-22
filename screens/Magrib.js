@@ -9,7 +9,7 @@ const audioTrack = require("../audio/5.Yatsı-Namazı-Tesbihatı.m4a");
 const data = require("../Highlighted/highlighted.json");
 
 export const Magrib = () => {
-  const fajrText = `Шам намаздын парзы окулуп, салам берилгенден кийин:
+  const fajrText = `Магриб намаздын парзы окулуп, салам берилгенден кийин:
   
 "Аллоохумма антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат. 
   

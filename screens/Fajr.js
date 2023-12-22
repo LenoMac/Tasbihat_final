@@ -7,7 +7,7 @@ import HighlightText from "@sanar/react-native-highlight-text";
 
 const audioTrack = require("../audio/Sabah.m4a");
 const data = require("../Highlighted/highlighted.json");
-const fajrText = `Багымдат намаздын парзы окулуп, салам берилгенден кийин:
+const fajrText = `Фаджр намаздын парзы окулуп, салам берилгенден кийин:
 
 
 "Аллоохумма антас-салааму ваминкас - салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат.

@@ -9,7 +9,7 @@ const audioTrack = require("../audio/4.Akşam_Namazsı_Tesbihatı_Ömer_Arslan_I
 const data = require("../Highlighted/highlighted.json");
 
 export const Isha = () => {
-  const fajrText = `Куптан намаздын парзы окулуп, салам берилгенден кийин:
+  const fajrText = `Иша намаздын парзы окулуп, салам берилгенден кийин:
   
 "Аллоохумма антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат. 
   
