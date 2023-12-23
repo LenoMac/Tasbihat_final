@@ -140,7 +140,9 @@ export const Zuhr = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
+      <View>
+        <SoundArea audioTrack={audioTrack} />
+      </View>
     </View>
   );
 };

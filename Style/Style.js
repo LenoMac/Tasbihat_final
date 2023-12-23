@@ -57,14 +57,15 @@ export const gStyle = StyleSheet.create({
   },
   textArabic: {
     textAlign: "center",
-    fontSize: 28,
+    fontSize: 30,
     color: "#fff",
+    lineHeight: 60,
   },
   textRus: {
     textAlign: "center",
     color: "#fff",
     fontSize: 18,
-    lineHeight: 38,
+    lineHeight: 30,
   },
   menu: {
     width: "100%",
@@ -340,7 +341,7 @@ export const gStyle = StyleSheet.create({
     paddingBottom: 30,
   },
   surTitle: {
-    fontSize: 30,
+    fontSize: 20,
     color: "yellow",
     fontWeight: "500",
     textAlign: "center",

@@ -33,7 +33,13 @@ export const Shahada = ({ navigation }) => {
             <View>
               <Image style={{ width: 200, height: 245 }} source={ShahadaLogo} />
             </View>
-            <Text style={[gStyle.textArabic, gStyle.text]}>
+            <Text
+              style={[
+                gStyle.textArabic,
+                gStyle.text,
+                { fontFamily: "Montserrat Meduim" },
+              ]}
+            >
               أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَ أَشْهَدُ أَنَّ
               مُحَمَّدًا عَبْدُهُ وَ رَسُولُهُ
             </Text>

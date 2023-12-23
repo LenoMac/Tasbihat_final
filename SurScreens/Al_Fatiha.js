@@ -57,16 +57,16 @@ export default function Al_Fatiha() {
   return (
     <View style={gStyle.main}>
       <View style={gStyle.header}>
-        <Header title={lang === 'kg' ? 'СҮРӨЛӨР' : 'СУРЫ'} />
+        <Header title={lang === "kg" ? "СҮРӨЛӨР" : "СУРЫ"} />
       </View>
       <ScrollView>
         <View style={gStyle.container}>
           <View style={gStyle.container_row}>
             <SurSample
-              title="Аль-Фатиха"
+              title={lang === "kg" ? "ФАТИХА СУРООСУ" : "аль-Фатиха"}
               arabicText={arabicText}
               rusText={rusText}
-              meaningText={lang === 'kg' ? meaningKgText : meaningRusText}
+              meaningText={lang === "kg" ? meaningKgText : meaningRusText}
             />
           </View>
         </View>
