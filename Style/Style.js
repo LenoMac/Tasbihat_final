@@ -123,7 +123,7 @@ export const gStyle = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 40,
-    marginLeft: windowWidth <= 375 ? 35 : windowWidth >= 392 ? 55 : 100,
+    marginLeft: windowWidth <= 375 ? 35 : windowWidth >= 392 ? 55 : 70,
   },
 
   button: {
