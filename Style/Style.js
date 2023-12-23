@@ -123,7 +123,7 @@ export const gStyle = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 40,
-    marginLeft: windowWidth <= 375 ? 35 : windowWidth >= 392 ? 55 : 70,
+    marginLeft: windowWidth <= 375 ? 35 : windowWidth >= 392 ? 55 : 60,
   },
 
   button: {
@@ -147,7 +147,6 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     fontWeight: "600",
-    // fontFamily: "Montserrat SemiBold",
   },
   section: {
     marginTop: 20,
@@ -215,7 +214,6 @@ export const gStyle = StyleSheet.create({
   text2: {
     color: "#fff",
     fontSize: 19,
-    // fontFamily: 'Montserrat Medium'
   },
 
   // Tafrijia
@@ -298,7 +296,6 @@ export const gStyle = StyleSheet.create({
   headerText: {
     color: "#fff",
     fontSize: Dimensions.get("window").width <= 375 ? 18 : 20,
-    // fontFamily: "Montserrat SemiBold",
   },
   // FAJR
   soundArea: {
@@ -366,7 +363,3 @@ export const gStyle = StyleSheet.create({
     marginTop: 20,
   },
 });
-
-//
-//
-// /
