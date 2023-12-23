@@ -24,7 +24,9 @@ export default function SurSample({ title, arabicText, rusText, meaningText }) {
       <Text style={[gStyle.surTitle, { fontFamily: "Montserrat Semibold" }]}>
         {title}
       </Text>
-      <Text style={gStyle.surArabic}>{arabicText}</Text>
+      <Text style={[gStyle.surArabic, { fontFamily: "Montserrat Meduim" }]}>
+        {arabicText}
+      </Text>
       <Text
         style={[
           gStyle.text,

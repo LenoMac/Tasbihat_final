@@ -121,7 +121,7 @@ export const Menu = () => {
                     { fontFamily: "Montserrat Semibold" },
                   ]}
                 >
-                  Русский
+                  На русском
                 </Text>
               </View>
             </Pressable>
