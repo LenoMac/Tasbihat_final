@@ -298,7 +298,6 @@ export const gStyle = StyleSheet.create({
   headerText: {
     color: "#fff",
     fontSize: Dimensions.get("window").width <= 375 ? 18 : 20,
-    // fontFamily: "Montserrat SemiBold",
   },
   // FAJR
   soundArea: {
@@ -366,7 +365,3 @@ export const gStyle = StyleSheet.create({
     marginTop: 20,
   },
 });
-
-//
-//
-// /
