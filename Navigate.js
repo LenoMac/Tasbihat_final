@@ -6,7 +6,7 @@ import { Menu } from "./screens/Menu";
 import { Shahada } from "./screens/Shahada";
 import { Tasbihat } from "./screens/Tasbihat";
 import { Sur } from "./screens/Sur";
-import { Prayer } from "./screens/Prayer";
+import Prayer from "./screens/Prayer";
 import { Javshan } from "./screens/Javshan";
 import Tafrijia from "./screens/Tafrijia";
 import { HomeBack } from "./screens/HomeBack";

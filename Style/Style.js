@@ -366,10 +366,11 @@ export const gStyle = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
-    // fontFamily: 'Montserrat Medium',
   },
+  // Дуалар
+  duaContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 20
+  }
 });
-
-//
-//
-// /
