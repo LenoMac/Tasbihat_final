@@ -372,5 +372,21 @@ export const gStyle = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 20
+  },
+  dual:{
+    display:'flex',
+    flexDirection:'column',
+    gap:100,
+  },
+  dualArab:{
+    textAlign:'right',
+    paddingBottom: 30,
+  },
+  dualRuss:{
+    textAlign:'left',
+  },
+  dualMeaning:{
+    textAlign:'left',
   }
 });
+

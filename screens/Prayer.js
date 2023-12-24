@@ -127,13 +127,13 @@ const Prayer = () => {
       <ScrollView>
         <View style={gStyle.container}>
           <View style={gStyle.container_row}>
-            <View>
+            <View style={gStyle.dual}> 
               {DuaData.map((value, index) => {
                 return (
                   <View key={index} style={gStyle.duaContainer}>
-                    <Text style={[gStyle.textArabic]}>{value.arabicText}</Text>
-                    <Text style={gStyle.textRus}>{value.rusText}</Text>
-                    <Text style={[gStyle.textRus]}>
+                    <Text style={[gStyle.textArabic, gStyle.dualArab]}>{value.arabicText}</Text>
+                    <Text style={[gStyle.textRus, gStyle.dualRuss]}>{value.rusText}</Text>
+                    <Text style={[gStyle.textRus, gStyle.dualMeaning]}>
                       {lang === "kg"
                         ? value.meaningKgText
                         : value.meaningRusText}
