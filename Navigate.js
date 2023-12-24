@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Menu } from "./screens/Menu";
@@ -9,7 +7,6 @@ import { Sur } from "./screens/Sur";
 import { Prayer } from "./screens/Prayer";
 import { Javshan } from "./screens/Javshan";
 import Tafrijia from "./screens/Tafrijia";
-import { HomeBack } from "./screens/HomeBack";
 import { Fajr } from "./screens/Fajr";
 import { Zuhr } from "./screens/Zuhr";
 import { Asr } from "./screens/Asr";
@@ -42,8 +39,7 @@ function Navigate() {
           name="Menu"
           component={Menu}
           options={{
-            title: "Addua",
-            headerShown: false,
+             headerShown: false,
           }}
         />
         <Stack.Screen

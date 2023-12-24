@@ -76,7 +76,6 @@ export const gStyle = StyleSheet.create({
     gap: 10,
     justifyContent: "space-between",
     alignItems: "center",
-    paddingBottom: 50,
   },
   logoAndText: {
     alignItems: "center",
@@ -362,4 +361,10 @@ export const gStyle = StyleSheet.create({
     justifyContent: "flex-end",
     marginTop: 20,
   },
+  Gate: {
+    width: '100%',
+    objectFit: 'cover',
+    position: 'absolute',
+    top: 0
+  }
 });
