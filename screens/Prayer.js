@@ -127,12 +127,53 @@ const Prayer = () => {
       <ScrollView>
         <View style={gStyle.container}>
           <View style={gStyle.container_row}>
-            <View style={gStyle.dual}> 
+            <View style={gStyle.dual}>
               {DuaData.map((value, index) => {
                 return (
                   <View key={index} style={gStyle.duaContainer}>
-                    <Text style={[gStyle.textArabic, gStyle.dualArab]}>{value.arabicText}</Text>
-                    <Text style={[gStyle.textRus, gStyle.dualRuss]}>{value.rusText}</Text>
+                  <Text
+                      style={[
+                        gStyle.text,
+                        {
+                          color: "#F2BB4A",
+                          fontSize: 22,
+                          fontFamily: "Montserrat Semibold",
+                          textAlign:"right"
+                        },
+                      ]}
+                    >
+                      Logo
+                    </Text>
+                    <Text style={[gStyle.textArabic, gStyle.dualArab, { fontFamily: "Montserrat Semibold",}]}>
+                      {value.arabicText}
+                    </Text>
+                    <Text
+                      style={[
+                        gStyle.text,
+                        {
+                          color: "#F2BB4A",
+                          fontSize: 20,
+                          fontFamily: "Montserrat Semibold",
+                        },
+                      ]}
+                    >
+                      Транскрипция
+                    </Text>
+                    <Text style={[gStyle.textRus, gStyle.dualRuss]}>
+                      {value.rusText}
+                    </Text>
+                    <Text
+                      style={[
+                        gStyle.text,
+                        {
+                          color: "#F2BB4A",
+                          fontSize: 20,
+                          fontFamily: "Montserrat Semibold",
+                        },
+                      ]}
+                    >
+                      {lang === "kg" ? "Мааниси" : "Значение"}
+                    </Text>
                     <Text style={[gStyle.textRus, gStyle.dualMeaning]}>
                       {lang === "kg"
                         ? value.meaningKgText

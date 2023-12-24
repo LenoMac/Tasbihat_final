@@ -25,7 +25,7 @@ export const gStyle = StyleSheet.create({
       ios: {
         marginTop:
           windowWidth >= 375 && windowWidth < 392
-            ? 70
+            ? 120
             : windowWidth >= 392 && windowWidth < 430
             ? 120
             : windowWidth >= 430 && 130,
@@ -57,9 +57,9 @@ export const gStyle = StyleSheet.create({
   },
   textArabic: {
     textAlign: "center",
-    fontSize: 30,
+    fontSize:  windowWidth >= 375 ? 22 : 25,
     color: "#fff",
-    lineHeight: 60,
+    lineHeight: 50,
   },
   textRus: {
     textAlign: "center",
@@ -76,7 +76,7 @@ export const gStyle = StyleSheet.create({
     gap: 10,
     justifyContent: "space-between",
     alignItems: "center",
-    paddingBottom: 50,
+    paddingBottom:50,
   },
   logoAndText: {
     alignItems: "center",
@@ -258,7 +258,7 @@ export const gStyle = StyleSheet.create({
     width: "100%",
     padding: 20,
     paddingBottom: 15,
-    paddingTop: Platform.OS === "ios" ? 0 : Platform.OS === "android" && 10,
+    paddingTop: Platform.OS === "ios" ? 46 : Platform.OS === "android" && 10,
     position: "absolute",
     zIndex: 10,
     left: 0,
@@ -338,7 +338,7 @@ export const gStyle = StyleSheet.create({
     paddingBottom: 30,
   },
   surTitle: {
-    fontSize: 20,
+    fontSize: 25,
     color: "yellow",
     fontWeight: "500",
     textAlign: "center",
@@ -346,7 +346,7 @@ export const gStyle = StyleSheet.create({
   surArabic: {
     color: "white",
     fontSize: 23,
-    lineHeight: 55,
+    lineHeight: 50,
     textAlign: "right",
   },
   surRus: {
@@ -366,7 +366,8 @@ export const gStyle = StyleSheet.create({
   duaContainer: {
     display: 'flex',
     flexDirection: 'column',
-    gap: 20
+    gap: 20,
+    paddingBottom:50,
   },
   dual:{
     display:'flex',
@@ -382,5 +383,11 @@ export const gStyle = StyleSheet.create({
   },
   dualMeaning:{
     textAlign:'left',
+  },
+  Gate: {
+    width: '100%',
+    objectFit: 'cover',
+    position: 'absolute',
+    top: 0
   }
 });

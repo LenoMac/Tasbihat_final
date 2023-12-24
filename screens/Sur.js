@@ -139,7 +139,6 @@ export const Sur = () => {
         <Header title={lang === "kg" ? "СҮРӨЛӨР" : "СУРЫ"} />
       </View>
       <ScrollView style={gStyle.sur_cont}>
-        {/* <View style={gStyle.container}> */}
         <View style={gStyle.sur_cont_row}>
           {ListOfSur.map((item, index) => {
             return (
@@ -153,7 +152,6 @@ export const Sur = () => {
             );
           })}
         </View>
-        {/* </View> */}
       </ScrollView>
     </>
   );

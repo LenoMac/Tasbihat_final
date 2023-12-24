@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, ScrollView, Image } from "react-native";
 import React from "react";
 import Header from "../screens/Header";
 import { gStyle } from "../Style/Style";
@@ -63,7 +63,7 @@ export default function Al_Fatiha() {
         <View style={gStyle.container}>
           <View style={gStyle.container_row}>
             <SurSample
-              title={lang === "kg" ? "ФАТИХА СУРООСУ" : "аль-Фатиха"}
+              title={lang === "kg" ? "ФАТИХА СҮРӨӨСҮ" : "аль-Фатиха"}
               arabicText={arabicText}
               rusText={rusText}
               meaningText={lang === "kg" ? meaningKgText : meaningRusText}
