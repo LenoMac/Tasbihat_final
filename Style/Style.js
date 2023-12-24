@@ -25,7 +25,7 @@ export const gStyle = StyleSheet.create({
       ios: {
         marginTop:
           windowWidth >= 375 && windowWidth < 392
-            ? 120
+            ? 70
             : windowWidth >= 392 && windowWidth < 430
             ? 120
             : windowWidth >= 430 && 130,
@@ -258,7 +258,7 @@ export const gStyle = StyleSheet.create({
     width: "100%",
     padding: 20,
     paddingBottom: 15,
-    paddingTop: Platform.OS === "ios" ? 45 : Platform.OS === "android" && 10,
+    paddingTop: Platform.OS === "ios" ? 0 : Platform.OS === "android" && 10,
     position: "absolute",
     zIndex: 10,
     left: 0,

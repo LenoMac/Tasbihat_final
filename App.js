@@ -23,11 +23,13 @@ export default function App() {
     "Montserrat Semibold": require("./assets/fonts/Montserrat-SemiBold.ttf"),
   });
 
-  if(!fontsLoaded) return <Button title="It is not working on it!"/>
+  if (!fontsLoaded) return <Button title="It is not working on it!" />;
   return (
-    <View style={gStyle.app}>
-      <StatusBar backgroundColor="#320548" barStyle="light-content" />
-      <Navigate />
-    </View>
+    <SafeAreaView backgroundColor="#320548">
+      <View style={gStyle.app}>
+        <StatusBar backgroundColor="#320548" barStyle="light-content" />
+        <Navigate />
+      </View>
+    </SafeAreaView>
   );
 }
