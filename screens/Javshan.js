@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Text, View, ScrollView, FlatList, Image } from "react-native";
 import { gStyle } from "../Style/Style";
 import Header from "./Header";
@@ -13,6 +14,7 @@ export const Javshan = () => {
       {/* <View style={gStyle.header}>
         <Header title="ЖАВШАН" />
       </View> */}
+
       <View style={gStyle.container}>
         <FlatList
           data={Slides}

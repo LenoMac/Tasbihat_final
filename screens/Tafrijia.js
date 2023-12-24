@@ -68,6 +68,7 @@ export default function Tafrijia() {
             <Text
               style={[
                 gStyle.textArabic,
+
                 { textAlign: "right", fontFamily: "Montserrat Medium" },
               ]}
             >
