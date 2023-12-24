@@ -5,8 +5,10 @@ import Header from "./Header";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 // Импорт изображении
 import ShahadaLogo from "../img/Shaha_logo.png";
+
 export const Shahada = ({ navigation }) => {
   const [lang, setLang] = React.useState();
+
 
   React.useEffect(() => {
     loadSavedLang();
@@ -37,7 +39,7 @@ export const Shahada = ({ navigation }) => {
               style={[
                 gStyle.textArabic,
                 gStyle.text,
-                { fontFamily: "Montserrat Meduim" },
+                { fontFamily: "Montserrat Medium" },
               ]}
             >
               أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَ أَشْهَدُ أَنَّ

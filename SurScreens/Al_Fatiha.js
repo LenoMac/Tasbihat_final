@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, ScrollView, Image } from "react-native";
 import React from "react";
 import Header from "../screens/Header";
 import { gStyle } from "../Style/Style";

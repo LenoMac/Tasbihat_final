@@ -179,7 +179,7 @@ export const Asr = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text style={gStyle.tasbihatText}>
+          <Text style={[gStyle.tasbihatText,  { fontFamily: "Montserrat Medium" }]}>
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
@@ -188,7 +188,9 @@ export const Asr = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
+      <View>
+        <SoundArea audioTrack={audioTrack} />
+        </View>
     </View>
   );
 };

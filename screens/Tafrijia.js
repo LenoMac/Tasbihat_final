@@ -68,7 +68,8 @@ export default function Tafrijia() {
             <Text
               style={[
                 gStyle.textArabic,
-                { textAlign: "right", fontFamily: "Montserrat Meduim" },
+
+                { textAlign: "right", fontFamily: "Montserrat Medium" },
               ]}
             >
               اَللَّهُمَّ صَلِّ صلاةً كَامِلَةً وَسَلِّمْ سَلاَمًا تَامًّا عَلَى
