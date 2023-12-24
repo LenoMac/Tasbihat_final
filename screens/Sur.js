@@ -100,8 +100,12 @@ const CustomButton = ({ title, name, number, onPress }) => {
     <TouchableOpacity onPress={() => onPress(name)}>
       <View style={gStyle.sur_btn}>
         <View style={gStyle.sur_btn_row}>
-          <Text style={gStyle.text1}>{number + "."}</Text>
-          <Text style={gStyle.text2}>{title}</Text>
+          <Text style={[gStyle.text1, { fontFamily: "Montserrat Medium" }]}>
+            {number + "."}
+          </Text>
+          <Text style={[gStyle.text2, { fontFamily: "Montserrat Medium" }]}>
+            {title}
+          </Text>
         </View>
         <Image source={Right} />
       </View>

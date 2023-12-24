@@ -75,8 +75,9 @@ export const Menu = () => {
       <View style={gStyle.menu}>
         <View style={gStyle.logoAndText}>
           <Image style={{ width: 120, height: 120 }} source={Logo} />
-          <Text style={gStyle.title}>НАМАЗ ТАСБИХАТЫ</Text>
-          {/* Lang container */}
+          <Text style={[gStyle.title, { fontFamily: "Montserrat Semibold" }]}>
+            НАМАЗ ТАСБИХАТЫ
+          </Text>
           <View style={gStyle.language}>
             <Pressable onPress={changeToKg}>
               <View
@@ -91,7 +92,14 @@ export const Menu = () => {
                   style={{ width: 20, objectFit: "scale-down" }}
                   source={KG}
                 />
-                <Text style={gStyle.langText}>Кыргызча</Text>
+                <Text
+                  style={[
+                    gStyle.langText,
+                    { fontFamily: "Montserrat Semibold" },
+                  ]}
+                >
+                  Кыргызча
+                </Text>
               </View>
             </Pressable>
             <Pressable onPress={changeToRus}>
@@ -107,7 +115,14 @@ export const Menu = () => {
                   style={{ width: 20, objectFit: "scale-down" }}
                   source={RUS}
                 />
-                <Text style={gStyle.langText}>Русский</Text>
+                <Text
+                  style={[
+                    gStyle.langText,
+                    { fontFamily: "Montserrat Semibold" },
+                  ]}
+                >
+                  На русском
+                </Text>
               </View>
             </Pressable>
           </View>
@@ -126,7 +141,7 @@ export const Menu = () => {
           })}
         </View>
         <Pressable onPress={() => navigation.navigate("about")}>
-          <Text style={gStyle.about}>
+          <Text style={[gStyle.about, { fontFamily: "Montserrat Semibold" }]}>
             {lang === "kg" ? "Тиркеме жөнүндө" : "О приложений"}
           </Text>
         </Pressable>

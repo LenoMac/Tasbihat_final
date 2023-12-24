@@ -10,7 +10,11 @@ const CustomButton = ({ onPress, title, name }) => {
       style={gStyle.buttonContainer}
     >
       <View style={gStyle.button}>
-        <Text style={gStyle.buttonText}>{title}</Text>
+        <Text
+          style={[gStyle.buttonText, { fontFamily: "Montserrat Semibold" }]}
+        >
+          {title}
+        </Text>
       </View>
     </TouchableOpacity>
   );

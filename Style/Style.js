@@ -384,4 +384,3 @@ export const gStyle = StyleSheet.create({
     textAlign:'left',
   }
 });
-
