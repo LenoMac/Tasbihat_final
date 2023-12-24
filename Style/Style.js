@@ -1,5 +1,4 @@
 import { Dimensions, Platform, StyleSheet } from "react-native";
-
 const platform = Platform.OS;
 const windowWidth = Dimensions.get("window").width;
 
@@ -49,7 +48,6 @@ export const gStyle = StyleSheet.create({
   },
   text: {
     color: "#fff",
-    // fontFamily: "Montserrat Medium",
   },
   tasbihatText: {
     fontSize: windowWidth / 24,
@@ -59,14 +57,15 @@ export const gStyle = StyleSheet.create({
   },
   textArabic: {
     textAlign: "center",
-    fontSize: 28,
+    fontSize: 30,
     color: "#fff",
+    lineHeight: 60,
   },
   textRus: {
     textAlign: "center",
     color: "#fff",
     fontSize: 18,
-    lineHeight: 38,
+    lineHeight: 30,
   },
   menu: {
     width: "100%",
@@ -85,9 +84,8 @@ export const gStyle = StyleSheet.create({
   },
   title: {
     color: "#F1DC1A",
-    // fontFamily: "Montserrat SemiBold",
-    fontWeight: "bold",
-    fontSize: 25,
+    fontWeight: "900",
+    fontSize: 22,
   },
   language: {
     display: "flex",
@@ -125,7 +123,7 @@ export const gStyle = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 40,
-    marginLeft: windowWidth <= 375 ? 35 : windowWidth >= 392 ? 55 : 100,
+    marginLeft: windowWidth <= 375 ? 35 : windowWidth >= 392 ? 55 : 60,
   },
 
   button: {
@@ -149,7 +147,6 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     fontWeight: "600",
-    // fontFamily: "Montserrat SemiBold",
   },
   section: {
     marginTop: 20,
@@ -217,7 +214,6 @@ export const gStyle = StyleSheet.create({
   text2: {
     color: "#fff",
     fontSize: 19,
-    // fontFamily: 'Montserrat Medium'
   },
 
   // Tafrijia
@@ -273,8 +269,8 @@ export const gStyle = StyleSheet.create({
       ios: {
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 3,
+        shadowOpacity: 0.1,
+        shadowRadius: 10,
       },
       android: {
         elevation: 10,
@@ -300,7 +296,6 @@ export const gStyle = StyleSheet.create({
   headerText: {
     color: "#fff",
     fontSize: Dimensions.get("window").width <= 375 ? 18 : 20,
-    // fontFamily: "Montserrat SemiBold",
   },
   // FAJR
   soundArea: {
@@ -343,7 +338,7 @@ export const gStyle = StyleSheet.create({
     paddingBottom: 30,
   },
   surTitle: {
-    fontSize: 30,
+    fontSize: 20,
     color: "yellow",
     fontWeight: "500",
     textAlign: "center",
@@ -358,7 +353,6 @@ export const gStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     lineHeight: 38,
-    // fontFamily: "Montserrat Medium",
   },
   about: {
     alignSelf: "center",
@@ -366,6 +360,7 @@ export const gStyle = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-end",
+    marginTop: 20,
   },
   // Дуалар
   duaContainer: {

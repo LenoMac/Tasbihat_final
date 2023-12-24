@@ -236,7 +236,9 @@ export const Fajr = () => {
           </Text>
         </View>
       </ScrollView>
-      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
+      <View>
+        <SoundArea audioTrack={audioTrack} />
+      </View>
     </View>
   );
 };

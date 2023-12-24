@@ -74,7 +74,7 @@ export default function SoundArea({ audioTrack }) {
     const updatePosition = async () => {
         try {
             const newPositionMillis = await sound.current.getStatusAsync()
-            setPositionMillis(newPositionMillis)
+            setPositionMillis(newPositionMillis.positionMillis)
         } catch (error) {
             console.error('Ошибка при получении позиции', error)
         }

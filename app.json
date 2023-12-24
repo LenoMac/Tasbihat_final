@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tasbihat.2",
+    "name": "Тасбихат",
     "slug": "tasbihat",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -11,9 +11,7 @@
       "resizeMode": "cover",
       "backgroundColor": "#320548"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.hafizbeyyyy.tasbihat"
