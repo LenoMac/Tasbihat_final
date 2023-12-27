@@ -18,7 +18,7 @@ export default function Tafrijia() {
   const handlePress = () => {
     setNumber((prev) => prev + 1);
     saveNumber(number + 1);
-    Platform.OS === "android" && Vibration.vibrate(60);
+    Platform.OS === "android" && Vibration.vibrate(50);
   };
   const numberZero = () => {
     setNumber((prev) => (prev < 1 ? 0 : prev - 1));
@@ -91,13 +91,13 @@ export default function Tafrijia() {
                 },
               ]}
             >
-              Окулушу
+              Транскрипция
             </Text>
             <Text
               style={[
                 gStyle.textRus,
                 gStyle.text,
-                { textAlign: "left", fontFamily: "Montserrat Meduim" },
+                { textAlign: "left", fontFamily: "Montserrat Medium" },
               ]}
             >
               Аллахумма салли салятан камилятан васаллим саляман тамман ‘аля

@@ -5,11 +5,8 @@ import Header from "./Header";
 import SoundArea from "./SoundArea";
 import HighlightText from "@sanar/react-native-highlight-text";
 
-const audioTrack = require("../audio/4.Akşam_Namazsı_Tesbihatı_Ömer_Arslan_Irmak_Tv_Radyo_Cihan_YEN.m4a");
-const data = require("../Highlighted/highlighted.json");
-
 export const Isha = () => {
-  const fajrText = `Иша намаздын парзы окулуп, салам берилгенден кийин:
+  const ishaText = `Иша намаздын парзы окулуп, салам берилгенден кийин:
   
 "Аллоохумма антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат. 
   
@@ -124,6 +121,9 @@ export const Isha = () => {
 СодакАллоохул 'Азыйм.
   
   `;
+  const audioTrack = require("../audio/Isha.mp3");
+  const data = require("../Highlighted/highlighted.json");
+
   return (
     <View>
       <View style={gStyle.header}>
@@ -131,16 +131,20 @@ export const Isha = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text style={gStyle.tasbihatText}>
+          <Text
+            style={[gStyle.tasbihatText, { fontFamily: "Montserrat Medium" }]}
+          >
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
-              textToHighlight={fajrText}
+              textToHighlight={ishaText}
             />
           </Text>
         </View>
       </ScrollView>
-      <View>{/* <SoundArea audioTrack={audioTrack} /> */}</View>
+      <View>
+        <SoundArea audioTrack={audioTrack} />
+      </View>
     </View>
   );
 };

@@ -5,11 +5,10 @@ import Header from "./Header";
 import SoundArea from "./SoundArea";
 import HighlightText from "@sanar/react-native-highlight-text";
 
-const audioTrack = require("../audio/Beshim.m4a");
-const data = require("../Highlighted/highlighted.json");
-
 export const Zuhr = () => {
-  const fajrText = `Зухр намаздын парзы окулуп, салам берилгенден кийин:
+  const audioTrack = require("../audio/Beshim.mp3");
+  const data = require("../Highlighted/highlighted.json");
+  const zuhrText = `Зухр намаздын парзы окулуп, салам берилгенден кийин:
   
 "Аллоохумма антас-салааму ваминкас-салаам, табаарокта йаа зал-жалаали вал икроом" деп айтылат. 
   
@@ -131,11 +130,13 @@ export const Zuhr = () => {
       </View>
       <ScrollView style={{ backgroundColor: "#320548", padding: 18 }}>
         <View style={gStyle.container}>
-          <Text style={gStyle.tasbihatText}>
+          <Text
+            style={[gStyle.tasbihatText, { fontFamily: "Montserrat Medium" }]}
+          >
             <HighlightText
               highlightStyle={{ color: "yellow" }}
               searchWords={data.highlighted}
-              textToHighlight={fajrText}
+              textToHighlight={zuhrText}
             />
           </Text>
         </View>

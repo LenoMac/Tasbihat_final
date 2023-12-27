@@ -57,14 +57,14 @@ export const gStyle = StyleSheet.create({
   },
   textArabic: {
     textAlign: "center",
-    fontSize: 30,
+    fontSize:  windowWidth <= 375 ? 25 : 30,
     color: "#fff",
-    lineHeight: 60,
+    lineHeight: 50,
   },
   textRus: {
     textAlign: "center",
     color: "#fff",
-    fontSize: 18,
+    fontSize: windowWidth <= 375 ? 17 : 18,
     lineHeight: 30,
   },
   menu: {
@@ -76,6 +76,7 @@ export const gStyle = StyleSheet.create({
     gap: 10,
     justifyContent: "space-between",
     alignItems: "center",
+    paddingBottom:50,
   },
   logoAndText: {
     alignItems: "center",
@@ -83,7 +84,7 @@ export const gStyle = StyleSheet.create({
   },
   title: {
     color: "#F1DC1A",
-    fontWeight: "900",
+    fontWeight: "600",
     fontSize: 22,
   },
   language: {
@@ -93,7 +94,7 @@ export const gStyle = StyleSheet.create({
     alignSelf: "center",
     gap: 20,
     height: 35,
-    marginTop: 20,
+    marginTop: 20
   },
   lanContainer: {
     display: "flex",
@@ -209,10 +210,11 @@ export const gStyle = StyleSheet.create({
     color: "#fff",
     fontSize: 20,
     width: 30,
+    fontSize: windowWidth > 375 ? 19 : 15,
   },
   text2: {
     color: "#fff",
-    fontSize: 19,
+    fontSize: windowWidth > 375 ? 19 : 15,
   },
 
   // Tafrijia
@@ -257,7 +259,7 @@ export const gStyle = StyleSheet.create({
     width: "100%",
     padding: 20,
     paddingBottom: 15,
-    paddingTop: Platform.OS === "ios" ? 45 : Platform.OS === "android" && 10,
+    paddingTop: Platform.OS === "ios" ? 46 : Platform.OS === "android" && 10,
     position: "absolute",
     zIndex: 10,
     left: 0,
@@ -337,7 +339,7 @@ export const gStyle = StyleSheet.create({
     paddingBottom: 30,
   },
   surTitle: {
-    fontSize: 20,
+    fontSize: 25,
     color: "yellow",
     fontWeight: "500",
     textAlign: "center",
@@ -345,7 +347,7 @@ export const gStyle = StyleSheet.create({
   surArabic: {
     color: "white",
     fontSize: 23,
-    lineHeight: 55,
+    lineHeight: 50,
     textAlign: "right",
   },
   surRus: {
@@ -361,10 +363,50 @@ export const gStyle = StyleSheet.create({
     justifyContent: "flex-end",
     marginTop: 20,
   },
+  // Дуалар
+  duaContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 20,
+    paddingBottom:50,
+  },
+  dual:{
+    display:'flex',
+    flexDirection:'column',
+    gap:100,
+  },
+  dualArab:{
+    textAlign:'right',
+    paddingBottom: 30,
+  },
+  dualRuss:{
+    textAlign:'left',
+  },
+  dualMeaning:{
+    textAlign:'left',
+  },
   Gate: {
     width: '100%',
     objectFit: 'cover',
     position: 'absolute',
     top: 0
+  },
+  javshanContainer: {
+    height: '80%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  javshanCard: {
+    backgroundColor: '#7100A9',
+    borderRadius: 20,
+    padding: 20,
+    height: '100%',
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 20,
+    alignItems: 'center',
+    width: windowWidth
   }
 });

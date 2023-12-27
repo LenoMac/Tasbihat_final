@@ -63,7 +63,7 @@ export default function Al_Fatiha() {
         <View style={gStyle.container}>
           <View style={gStyle.container_row}>
             <SurSample
-              title={lang === "kg" ? "ФАТИХА СУРООСУ" : "аль-Фатиха"}
+              title={lang === "kg" ? "ФАТИХА СҮРӨӨСҮ" : "аль-Фатиха"}
               arabicText={arabicText}
               rusText={rusText}
               meaningText={lang === "kg" ? meaningKgText : meaningRusText}

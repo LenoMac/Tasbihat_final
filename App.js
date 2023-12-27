@@ -1,10 +1,6 @@
 import {
   View,
   StatusBar,
-  NativeModules,
-  Button,
-  SafeAreaView,
-  Text,
   Image,
   Dimensions,
 } from "react-native";
@@ -12,13 +8,8 @@ import { gStyle } from "./Style/Style";
 import Navigate from "./Navigate";
 import { useFonts } from "expo-font";
 import Spinner from "./img/Spinner.gif";
-import { useEffect } from "react";
 
 export default function App() {
-
-  useEffect(() => {
-    console.log('Компонент был успешно рендерен');
-  }, []);
 
   const [fontsLoaded] = useFonts({
     "Montserrat Medium": require("./assets/fonts/Montserrat-Medium.ttf"),
@@ -27,7 +18,7 @@ export default function App() {
 
   return (
     <View style={gStyle.app}>
-      <StatusBar hidden={true} backgroundColor="transparent" translucent={true} barStyle="light-content"/>
+      <StatusBar backgroundColor='#320548' barStyle="light-content"/>
       {!fontsLoaded ? (
         <View
           style={{

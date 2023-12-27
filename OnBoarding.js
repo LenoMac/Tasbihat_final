@@ -1,8 +1,11 @@
 import { View, Text } from "react-native";
-export const OnboardingItem = () => {
+import { gStyle } from "./Style/Style";
+
+export const OnboardingItem = ({item}) => {
   return (
-    <View>
-      <Text>Hello</Text>
+    <View style={gStyle.javshanCard}>
+      <Text>{item.title}</Text>
+      <Text>{item.text}</Text>
     </View>
   );
 };

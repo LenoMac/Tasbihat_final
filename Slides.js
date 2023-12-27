@@ -22,4 +22,9 @@ export default [
     title: "1-БАБ",
     text: bab_1,
   },
+  {
+    id: "3",
+    title: "2-БАБ",
+    text: bab_1,
+  }
 ];
