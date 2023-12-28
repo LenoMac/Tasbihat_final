@@ -435,7 +435,7 @@ export const gStyle = StyleSheet.create({
   },
   javshanCounter: {
     color: '#fff',
-    fontSize: 25,
+    fontSize: 20,
     textAlign: 'center'
   }
 });
