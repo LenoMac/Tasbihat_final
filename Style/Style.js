@@ -385,12 +385,6 @@ export const gStyle = StyleSheet.create({
   dualMeaning:{
     textAlign:'left',
   },
-  Gate: {
-    width: '100%',
-    objectFit: 'cover',
-    position: 'absolute',
-    top: 0
-  },
   javshanContainer: {
     height: '80%',
     display: 'flex',
@@ -398,15 +392,50 @@ export const gStyle = StyleSheet.create({
     alignItems: 'center',
   },
   javshanCard: {
-    backgroundColor: '#7100A9',
-    borderRadius: 20,
-    padding: 20,
     height: '100%',
-    flex: 1,
+    alignItems: 'center',
+    width: windowWidth,
     display: 'flex',
     flexDirection: 'column',
-    gap: 20,
-    alignItems: 'center',
-    width: windowWidth
+    justifyContent: 'center'
+  },
+  javshanCard__card: {
+    backgroundColor: '#7100A9',
+    borderRadius: 20,
+    height: '80%',
+    width: '80%',
+    padding: 30,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 10,
+    borderWidth: 4,
+    borderColor: 'yellow'
+  },
+  javshanTitle: {
+    color: 'yellow',
+    fontSize: 20,
+    textAlign: 'center',
+    fontWeight: '900'
+  },
+  javshanText: {
+    color: '#fff',
+    fontSize: 15,
+    textAlign: 'left',
+
+  },
+  javshanEndContainer: {
+    height: '20%',
+    paddingHorizontal: 25,
+    gap: 10
+  },
+  javshanEnd: {
+    color: 'yellow',
+    fontSize: 20,
+    textAlign: 'center'
+  },
+  javshanCounter: {
+    color: '#fff',
+    fontSize: 20,
+    textAlign: 'center'
   }
 });
