@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { View, FlatList, Text, Dimensions } from "react-native";
 import { gStyle } from "../Style/Style";
 import Header from "./Header";
-import Slides from "../Slides";
+import JavDua from "./DuaScreens/Dua"; 
 import { OnboardingItem } from "../OnBoarding";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -50,7 +50,7 @@ export const Javshan = () => {
       <View style={gStyle.container}>
         <View style={gStyle.javshanContainer}>
           <FlatList
-            data={Slides}
+            data={JavDua}
             renderItem={({ item }) => (
               <OnboardingItem item={item} key={item.id} />
             )}
