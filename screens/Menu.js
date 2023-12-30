@@ -70,7 +70,7 @@ export const Menu = () => {
   };
   return (
     <ScrollView
-      style={{ width: "100%", height: "100%", backgroundColor: "#320548", paddingBottom:50 }}
+      style={{ width: "100%", height: "100%", backgroundColor: "#320548" }}
     >
       <View style={gStyle.menu}>
         <View style={gStyle.logoAndText}>
