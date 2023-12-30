@@ -102,7 +102,6 @@ export default function SoundArea({ audioTrack }) {
     return () => {
       cancelAnimationFrame(animationFrame);
       clearInterval(statusInterval);
-      console.log("Выгрузка звука");
       sound.current.unloadAsync();
     };
   }, []);

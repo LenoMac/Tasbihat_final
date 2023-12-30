@@ -76,7 +76,7 @@ export const Menu = () => {
         <View style={gStyle.logoAndText}>
           <Image style={{ width: 120, height: 120 }} source={Logo} />
           <Text style={[gStyle.title, { fontFamily: "Montserrat Semibold" }]}>
-            НАМАЗ ТАСБИХАТЫ
+            {lang === 'kg' ? 'НАМАЗ ТАСБИХАТЫ' : 'ТАСБИХАТ НАМАЗА'}
           </Text>
           <View style={gStyle.language}>
             <Pressable onPress={changeToKg}>
@@ -146,7 +146,6 @@ export const Menu = () => {
           </Text>
         </Pressable>
       </View>
-      {/* </View> */}
     </ScrollView>
   );
 };

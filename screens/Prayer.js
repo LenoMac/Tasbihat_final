@@ -131,20 +131,26 @@ const Prayer = () => {
               {DuaData.map((value, index) => {
                 return (
                   <View key={index} style={gStyle.duaContainer}>
-                  <Text
+                    <Text
                       style={[
                         gStyle.text,
                         {
                           color: "#F2BB4A",
                           fontSize: 22,
                           fontFamily: "Montserrat Semibold",
-                          textAlign:"right"
+                          textAlign: "right",
                         },
                       ]}
                     >
                       Logo
                     </Text>
-                    <Text style={[gStyle.textArabic, gStyle.dualArab, { fontFamily: "Montserrat Semibold",}]}>
+                    <Text
+                      style={[
+                        gStyle.textArabic,
+                        gStyle.dualArab,
+                        { fontFamily: "Montserrat Medium" },
+                      ]}
+                    >
                       {value.arabicText}
                     </Text>
                     <Text
@@ -153,7 +159,7 @@ const Prayer = () => {
                         {
                           color: "#F2BB4A",
                           fontSize: 20,
-                          fontFamily: "Montserrat Semibold",
+                          fontFamily: "Montserrat Medium",
                         },
                       ]}
                     >
@@ -168,7 +174,7 @@ const Prayer = () => {
                         {
                           color: "#F2BB4A",
                           fontSize: 20,
-                          fontFamily: "Montserrat Semibold",
+                          fontFamily: "Montserrat Medium",
                         },
                       ]}
                     >

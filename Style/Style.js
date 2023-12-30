@@ -57,14 +57,14 @@ export const gStyle = StyleSheet.create({
   },
   textArabic: {
     textAlign: "center",
-    fontSize:  windowWidth >= 375 ? 22 : 25,
+    fontSize:  windowWidth <= 375 ? 25 : 30,
     color: "#fff",
     lineHeight: 50,
   },
   textRus: {
     textAlign: "center",
     color: "#fff",
-    fontSize: 18,
+    fontSize: windowWidth <= 375 ? 17 : 18,
     lineHeight: 30,
   },
   menu: {
@@ -84,7 +84,7 @@ export const gStyle = StyleSheet.create({
   },
   title: {
     color: "#F1DC1A",
-    fontWeight: "900",
+    fontWeight: "600",
     fontSize: 22,
   },
   language: {
@@ -94,7 +94,7 @@ export const gStyle = StyleSheet.create({
     alignSelf: "center",
     gap: 20,
     height: 35,
-    marginTop: 20,
+    marginTop: 20
   },
   lanContainer: {
     display: "flex",
@@ -210,10 +210,11 @@ export const gStyle = StyleSheet.create({
     color: "#fff",
     fontSize: 20,
     width: 30,
+    fontSize: windowWidth > 375 ? 19 : 15,
   },
   text2: {
     color: "#fff",
-    fontSize: 19,
+    fontSize: windowWidth > 375 ? 19 : 15,
   },
 
   // Tafrijia
@@ -384,10 +385,57 @@ export const gStyle = StyleSheet.create({
   dualMeaning:{
     textAlign:'left',
   },
-  Gate: {
-    width: '100%',
-    objectFit: 'cover',
-    position: 'absolute',
-    top: 0
+  javshanContainer: {
+    height: '80%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  javshanCard: {
+    height: '100%',
+    alignItems: 'center',
+    width: windowWidth,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
+  },
+  javshanCard__card: {
+    backgroundColor: '#7100A9',
+    borderRadius: 20,
+    height: '80%',
+    width: '80%',
+    padding: 30,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 10,
+    borderWidth: 4,
+    borderColor: 'yellow'
+  },
+  javshanTitle: {
+    color: 'yellow',
+    fontSize: 20,
+    textAlign: 'center',
+    fontWeight: '900'
+  },
+  javshanText: {
+    color: '#fff',
+    fontSize: 15,
+    textAlign: 'left',
+
+  },
+  javshanEndContainer: {
+    height: '20%',
+    paddingHorizontal: 25,
+    gap: 10
+  },
+  javshanEnd: {
+    color: 'yellow',
+    fontSize: 20,
+    textAlign: 'center'
+  },
+  javshanCounter: {
+    color: '#fff',
+    fontSize: 20,
+    textAlign: 'center'
   }
 });

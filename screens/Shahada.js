@@ -6,7 +6,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 // Импорт изображении
 import ShahadaLogo from "../img/Shaha_logo.png";
 
-export const Shahada = ({ navigation }) => {
+export const Shahada = () => {
   const [lang, setLang] = React.useState();
 
 
@@ -18,7 +18,6 @@ export const Shahada = ({ navigation }) => {
     try {
       const savedLang = await AsyncStorage.getItem("currentLanguage");
       setLang(savedLang);
-      console.log(savedLang);
     } catch (e) {
       console.log(e);
     }
@@ -49,7 +48,7 @@ export const Shahada = ({ navigation }) => {
               style={[
                 gStyle.textRus,
                 gStyle.text,
-                { fontFamily: "Montserrat Semibold" },
+                { fontFamily: "Montserrat Medium" },
               ]}
             >
               Ашхаду алля иляха илляллах. Ва ашхаду анна Мухаммадан ‘абдуху ва
@@ -61,7 +60,7 @@ export const Shahada = ({ navigation }) => {
                 style={[
                   gStyle.textRus,
                   gStyle.text,
-                  { fontFamily: "Montserrat Semibold" },
+                  { fontFamily: "Montserrat Medium" },
                 ]}
               >
                 Аллахтан башка сыйынууга татыктуу зат жок жана Мухаммад анын
@@ -72,7 +71,7 @@ export const Shahada = ({ navigation }) => {
                 style={[
                   gStyle.textRus,
                   gStyle.text,
-                  { fontFamily: "Montserrat Semibold" },
+                  { fontFamily: "Montserrat Medium" },
                 ]}
               >
                 Я свидетельствую, что нет никого достойного поклонения, кроме

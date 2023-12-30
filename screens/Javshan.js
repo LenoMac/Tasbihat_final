@@ -1,25 +1,85 @@
-import React from "react";
-
-import { Text, View, ScrollView, FlatList, Image } from "react-native";
+import React, { useRef } from "react";
+import { View, FlatList, Text, Dimensions } from "react-native";
 import { gStyle } from "../Style/Style";
 import Header from "./Header";
 import Slides from "../Slides";
 import { OnboardingItem } from "../OnBoarding";
-import Gate from "../img/gate_1.jpg";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 export const Javshan = () => {
+  const [page, setPage] = React.useState(Number(0));
+
+  React.useEffect(() => {
+    loadSavedIndex();
+  }, []);
+
+  const loadSavedIndex = async () => {
+    try {
+      const savedIndex = await AsyncStorage.getItem("savedIndex");
+      if(savedIndex !== null){
+        setPage(Number(savedIndex))
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const saveIndex = async (value) => {
+    try{
+      await AsyncStorage.setItem("savedIndex", value.toString())
+      setPage(value)
+    }
+    catch(e){
+      console.log('Error saving index', e);
+    }
+  }
+
+  const handleScroll = (event) => {
+    const { x } = event.nativeEvent.contentOffset;
+    const currentIndex = Math.round(x / Dimensions.get("window").width);
+    saveIndex(currentIndex)
+  };
+
   return (
     <View style={gStyle.main}>
-      <Image style={gStyle.Gate} source={Gate} />
       {/* HEADER */}
-      {/* <View style={gStyle.header}>
+      <View style={gStyle.header}>
         <Header title="ЖАВШАН" />
-      </View> */}
+      </View>
 
       <View style={gStyle.container}>
-        <FlatList
-          data={Slides}
-          renderItem={(item) => <OnboardingItem item={item} />}
-        />
+        <View style={gStyle.javshanContainer}>
+          <FlatList
+            data={Slides}
+            renderItem={({ item }) => (
+              <OnboardingItem item={item} key={item.id} />
+            )}
+            showsHorizontalScrollIndicator={false}
+            horizontal
+            pagingEnabled
+            bounces={false}
+            keyExtractor={(item) => item.id}
+            onScroll={handleScroll}
+            initialScrollIndex={page}
+            // initialNumToRender={100}
+          />
+        </View>
+        <View style={gStyle.javshanEndContainer}>
+          <Text
+            style={[
+              gStyle.javshanCounter,
+              { fontFamily: "Montserrat Semibold" },
+            ]}
+          >
+            {page + 1}/100
+          </Text>
+          <Text
+            style={[gStyle.javshanEnd, { fontFamily: "Montserrat Semibold" }]}
+          >
+            Субхаанака йаа лаа илааа иллаа антал амаанал амаана холлиснаа
+            минан-наар
+          </Text>
+        </View>
       </View>
     </View>
   );
